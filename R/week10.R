@@ -97,8 +97,8 @@ r2_eX<-cor(p_eX,test_tbl$`work hours`)^2#getting r2
 # Publication
 #first making separate vectors 
 cv_r2<-c(max(ols_reg$results$Rsquared),
-               max(random_forest$results$Rsquared),
                max(elastic_net$results$Rsquared),
+              max(random_forest$results$Rsquared),
                max(eXtreme$results$Rsquared))#make vector of cv r squareds
 ho_r2<-c(r2_ols,r2_elastic,r2_rf,r2_eX)#make vector of holdout r squared
 names<-c("OLS regression", "Elastic Net", "Random Forest", "eXtreme Gradient Boosting")
